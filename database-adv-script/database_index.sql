@@ -39,3 +39,10 @@ CREATE INDEX idx_property_pricepernight ON Property(pricepernight);
 EXPLAIN SELECT * FROM Booking WHERE user_id = 'some_user_id';
 
 EXPLAIN SELECT * FROM Booking WHERE user_id = 'some_user_id';
+
+-- Query with filter to test index
+EXPLAIN ANALYZE
+SELECT ...
+FROM Booking B
+JOIN User U ON ...
+WHERE B.user_id = 'some_user_id';
