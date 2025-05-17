@@ -72,3 +72,10 @@ INNER JOIN
     Payment pay ON b.booking_id = pay.booking_id
 WHERE
     b.start_date >= '2023-01-01';  -- Example filter to limit data
+
+-- Query with filter to test index
+EXPLAIN ANALYZE
+SELECT ...
+FROM Booking b
+JOIN User U ON ...
+WHERE b.user_id = 'some-existing-id';
