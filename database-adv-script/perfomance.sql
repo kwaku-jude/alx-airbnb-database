@@ -79,3 +79,8 @@ SELECT ...
 FROM Booking b
 JOIN User U ON ...
 WHERE b.user_id = 'some-existing-id';
+
+FROM Booking b
+JOIN User U ON b.user_id = U.user_id
+JOIN Property p ON b.property_id = p.property_id AND p.pricepernight > 0
+LEFT JOIN Payment pay ON pay.booking_id = b.booking_id;
