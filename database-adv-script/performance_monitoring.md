@@ -1,9 +1,12 @@
-Database Performance Monitoring Report – ALX Airbnb
-Objective
-Monitor and refine the performance of frequently used SQL queries using EXPLAIN ANALYZE.
+# Performance Monitoring Report
 
-Query Example Analyzed
-SELECT *
-FROM Booking
-JOIN User ON Booking.user_id = User.user_id
-WHERE Booking.start_date BETWEEN '2023-01-01' AND '2023-12-31';
+## Objective
+The goal of this task is to monitor and refine the performance of frequently used queries in the database. We have analyzed and optimized queries to reduce execution time and improve overall performance.
+
+## Queries Monitored
+
+### Query 1: Retrieve All Bookings for a User
+
+Original Query:
+```sql
+SELECT * FROM Booking WHERE user_id = 1;
